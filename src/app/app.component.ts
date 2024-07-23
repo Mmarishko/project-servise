@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
         private meta: Meta,
         private router: Router,
     ) {
-        this.meta.addTag({name: 'description', content: 'root_desc'})
+        this.meta.addTag({name: 'og:desc', content: 'root_desc'})
     }
 
     ngOnInit() {
