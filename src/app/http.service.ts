@@ -33,18 +33,13 @@ export class HttpService {
 
   }
 
-  public post(url: string, parameters:any): Observable<any>{
+  public post(url: string, parameters?:{}): Observable<any>{
 
     if (parameters && Object.keys(parameters).length != 0) {
-      const firstKey = Object.keys(parameters)[0];
-      const firstValue =String(parameters[firstKey]);
-
-      const params = new HttpParams().set(firstKey, firstValue);
-      const options = {params: params};
-
+      const options = {params: parameters};
       return this.http.post(url, options);
     } else {
-      return this.http.post(url, parameters);
+      return this.http.post(url, {});
     }
 
   }
