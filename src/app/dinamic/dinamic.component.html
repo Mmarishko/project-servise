@@ -1,0 +1,18 @@
+<p>Динамический компонент</p>
+
+<table>
+    <thead>
+    <tr>
+        <th>Имя</th>
+        <th>Возраст</th>
+        <th>Пол</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of dinamicData">
+            <th>{{item.name}}</th>
+            <th>{{item.age}}</th>
+            <th>{{item.sex}}</th>
+        </tr>
+    </tbody>
+</table>
